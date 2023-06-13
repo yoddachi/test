@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . .
 
 # Compila la aplicación Go
-RUN CGO_ENABLED=0 GOOS=linux go build -o server .
+RUN go build -o server .
 
 # Crea una nueva imagen ligera para ejecutar la aplicación
 FROM alpine:latest
